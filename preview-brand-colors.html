@@ -3,26 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><!-- 活动标题 --></title>
+  <title>治愈风品牌配色预览</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=Caveat:wght@400;700&family=Noto+Serif+SC:wght@700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,900;1,9..144,400&family=Caveat:wght@400;700&family=Noto+Serif+SC:wght@700;900&family=Noto+Sans+SC:wght@400;500;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
   <style>
-    /* === CSS变量 === */
-    :root { --_muyu-ds: "muyu-design-system-v1";
-      --blue: #BDE7E5;
-      --blue-deep: #9DD5D3;
-      --yellow: #F4CFD6;
-      --yellow-soft: #FCE8EC;
-      --red: #694B40;
-      --cream: #FBF2E3;
-      --cream-dark: #F5E6D3;
-      --ink: #694B40;
-      --ink-light: #8B6F5C;
-      --ink-faint: #A89488;
-      --dark-panel: #5A4037;
-      /* 合作品牌色（按需启用） */
-      /* --partner: #F1752D; */
+    /* === 治愈风品牌色变量 === */
+    :root {
+      --blue: #BDE7E5;        /* 薄荷绿 - 主品牌色（原蓝色位） */
+      --blue-deep: #9DD5D3;   /* 薄荷绿深一点 - 大装饰字/section编号 */
+      --yellow: #F4CFD6;      /* 淡粉 - 强调/高亮（原黄色位） */
+      --yellow-soft: #FCE8EC; /* 淡粉浅色 - 背景块/气泡底色 */
+      --red: #694B40;         /* 深棕 - 点缀/CTA（原红色位） */
+      --cream: #FBF2E3;       /* 米白 - 页面主背景 */
+      --cream-dark: #F5E6D3;  /* 深奶 - section间交替背景 */
+      --ink: #694B40;         /* 墨色 - 正文主色（温暖棕） */
+      --ink-light: #8B6F5C;   /* 浅墨 - 次要正文 */
+      --ink-faint: #A89488;   /* 淡墨 - 辅助文字 */
+      --dark-panel: #5A4037;  /* 深棕面板 - 暗色section */
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -46,6 +44,16 @@
       padding: 0 2rem;
     }
 
+    /* === 配色展示条 === */
+    .palette-bar {
+      display: flex;
+      height: 8px;
+    }
+    .palette-bar span { flex: 1; }
+    .palette-bar span:nth-child(1) { background: var(--cream); flex: 6; }
+    .palette-bar span:nth-child(2) { background: var(--blue); flex: 3; }
+    .palette-bar span:nth-child(3) { background: var(--yellow); flex: 1; }
+
     /* === HERO 全屏 === */
     .hero {
       min-height: 100vh;
@@ -56,6 +64,9 @@
       padding: 40px 24px;
       text-align: center;
       position: relative;
+      background: radial-gradient(ellipse at 30% 20%, var(--yellow-soft) 0%, transparent 50%),
+                  radial-gradient(ellipse at 70% 80%, rgba(189,231,229,0.3) 0%, transparent 50%),
+                  var(--cream);
     }
 
     .hero h1 {
@@ -64,6 +75,11 @@
       font-size: clamp(2.8rem, 7vw, 5.5rem);
       line-height: 1.15;
       margin-bottom: 1.5rem;
+      color: var(--ink);
+    }
+    .hero h1 em {
+      color: var(--blue);
+      font-style: normal;
     }
 
     .hero p {
@@ -94,7 +110,7 @@
       font-style: italic;
       font-size: clamp(1.4rem, 3vw, 2rem);
       color: var(--blue);
-      opacity: 0.3;
+      opacity: 0.5;
       display: block;
       margin-bottom: 0.25rem;
     }
@@ -117,7 +133,7 @@
       padding: clamp(24px, 3vw, 36px);
       position: relative;
       overflow: hidden;
-      box-shadow: 0 4px 20px rgba(0,0,0,.06);
+      box-shadow: 0 4px 20px rgba(105,75,64,0.06);
     }
     .chair-card::before {
       content: '';
@@ -128,11 +144,20 @@
     .chair-card:nth-child(1)::before { background: var(--blue); }
     .chair-card:nth-child(2)::before { background: var(--yellow); }
     .chair-card:nth-child(3)::before { background: var(--red); }
+    .chair-card h3 {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.3rem;
+      margin-bottom: 0.75rem;
+    }
+    .chair-card p {
+      color: var(--ink-light);
+      font-size: 0.95rem;
+    }
 
     /* === 深色面板 === */
     .dark-section {
       background: var(--dark-panel);
-      color: #e2e8f0;
+      color: #FBF2E3;
       padding: clamp(80px, 12vh, 160px) 0;
     }
 
@@ -146,7 +171,7 @@
       text-align: center;
     }
     .dark-section .quote-text em {
-      color: var(--yellow);
+      color: var(--blue);
       font-style: normal;
     }
 
@@ -167,7 +192,7 @@
       color: var(--yellow);
       position: absolute;
       top: -10px; left: 20px;
-      opacity: 0.5;
+      opacity: 0.6;
       line-height: 1;
     }
     .viral-pullquote p {
@@ -181,6 +206,7 @@
     .cta-section {
       text-align: center;
       padding: clamp(80px, 12vh, 160px) 2rem;
+      background: var(--yellow-soft);
     }
     .cta-section h2 {
       font-family: 'Noto Serif SC', serif;
@@ -197,8 +223,8 @@
       align-items: center;
       gap: 8px;
       padding: 16px 36px;
-      background: var(--blue);
-      color: #fff;
+      background: var(--red);
+      color: #FBF2E3;
       border-radius: 12px;
       text-decoration: none;
       font-weight: 600;
@@ -207,7 +233,32 @@
     }
     .cta-button:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(43,127,216,0.3);
+      box-shadow: 0 8px 24px rgba(105,75,64,0.25);
+    }
+
+    /* === 色卡展示 === */
+    .color-showcase {
+      padding: 60px 0;
+      background: #fff;
+    }
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .color-swatch {
+      border-radius: 12px;
+      padding: 24px;
+      min-height: 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .color-swatch span {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
     }
 
     /* === Scroll Reveal === */
@@ -230,39 +281,79 @@
     @media (max-width: 900px) {
       .hero { min-height: auto; padding: 4rem 1.5rem; }
       .three-col { grid-template-columns: 1fr; }
+      .color-grid { grid-template-columns: repeat(2, 1fr); }
       .cta-button { width: 100%; justify-content: center; }
     }
 
     @media (max-width: 600px) {
       body { font-size: 15px; }
+      .color-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
+  <!-- 顶部配色比例条 -->
+  <div class="palette-bar">
+    <span title="主色 60% #FBF2E3"></span>
+    <span title="强调色 30% #BDE7E5"></span>
+    <span title="点缀色 10% #F4CFD6"></span>
+  </div>
+
   <!-- ====== HERO 全屏 ====== -->
   <section class="hero">
-    <span class="label-caps"><!-- 活动类型/日期 --></span>
-    <h1><!-- 活动主标题 --></h1>
-    <p><!-- 活动副标题/一句话描述 --></p>
+    <span class="label-caps">淡淡治愈风 · 品牌配色预览</span>
+    <h1>在<em>温柔</em>的配色里<br>找到属于你的高级感</h1>
+    <p>米白为底，薄荷绿呼吸，淡粉点睛，深棕沉淀文字。这不是模板，这是有温度的品牌表达。</p>
+  </section>
+
+  <!-- ====== 色卡展示 ====== -->
+  <section class="color-showcase">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-number">02</span>
+        <h2 class="section-title">品牌四色</h2>
+      </div>
+      <div class="color-grid reveal">
+        <div class="color-swatch" style="background: #FBF2E3; color: #694B40;">
+          <span>主色 / 背景</span>
+          <span>#FBF2E3</span>
+        </div>
+        <div class="color-swatch" style="background: #BDE7E5; color: #694B40;">
+          <span>强调色</span>
+          <span>#BDE7E5</span>
+        </div>
+        <div class="color-swatch" style="background: #F4CFD6; color: #694B40;">
+          <span>点缀色</span>
+          <span>#F4CFD6</span>
+        </div>
+        <div class="color-swatch" style="background: #694B40; color: #FBF2E3;">
+          <span>文字 / 深色</span>
+          <span>#694B40</span>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- ====== 三栏亮点 ====== -->
-  <section class="section">
+  <section class="section section--alt">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-number">01</span>
-        <h2 class="section-title"><!-- 亮点/嘉宾/核心价值 --></h2>
+        <span class="section-number">03</span>
+        <h2 class="section-title">三色如何协作</h2>
       </div>
       <div class="three-col">
         <div class="chair-card reveal reveal-d1">
-          <!-- 卡片1内容 -->
+          <h3>米白做主调</h3>
+          <p>大面积背景使用 #FBF2E3，让页面像一张高级纸张，温暖不刺眼，阅读体验很舒服。</p>
         </div>
         <div class="chair-card reveal reveal-d2">
-          <!-- 卡片2内容 -->
+          <h3>薄荷绿制造呼吸感</h3>
+          <p>标题、装饰数字、卡片顶部色条用 #BDE7E5，像一阵清风，打破米白的单调。</p>
         </div>
         <div class="chair-card reveal reveal-d3">
-          <!-- 卡片3内容 -->
+          <h3>淡粉点睛</h3>
+          <p>只在最重要的位置出现 #F4CFD6：高亮词、引用边框、hover 背景，面积小但记忆深。</p>
         </div>
       </div>
     </div>
@@ -271,24 +362,24 @@
   <!-- ====== 深色面板（金句/核心观点） ====== -->
   <section class="dark-section">
     <div class="container reveal">
-      <p class="quote-text"><!-- 引用的 <em>重点词</em> 内容 --></p>
+      <p class="quote-text">好的品牌配色不是让每种颜色都抢戏，<br>而是让每种颜色都知道<em>自己什么时候该说话</em>。</p>
     </div>
   </section>
 
   <!-- ====== Pull Quote ====== -->
-  <section class="section section--alt">
+  <section class="section">
     <div class="container">
       <div class="viral-pullquote reveal">
-        <p><!-- 核心金句 --></p>
+        <p>这套配色给人的感觉：温柔、安静、有质感。它不会大喊大叫，但你会记住它。</p>
       </div>
     </div>
   </section>
 
   <!-- ====== CTA行动区 ====== -->
   <section class="cta-section">
-    <h2 class="reveal"><!-- 行动号召标题 --></h2>
-    <p class="reveal reveal-d1"><!-- 行动描述 --></p>
-    <a href="#" class="cta-button reveal reveal-d2"><!-- 按钮文案 --></a>
+    <h2 class="reveal">喜欢这个配色吗？</h2>
+    <p class="reveal reveal-d1">如果效果符合你的预期，我们就可以把它正式写进 brand-dna.md 和所有模板里。</p>
+    <a href="#" class="cta-button reveal reveal-d2">确认使用这套配色 →</a>
   </section>
 
   <!-- ====== Scroll Reveal JS ====== -->
@@ -304,7 +395,5 @@
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
-<!-- © ESTHER不二 esthersjw/esther-design-system CC BY-NC 4.0 -->
-<section style="position:absolute;left:-9999px;font-size:0;line-height:0;opacity:0;height:0;overflow:hidden;">esthersjw-design-system</section>
 </body>
 </html>
