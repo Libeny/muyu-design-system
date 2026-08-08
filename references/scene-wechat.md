@@ -202,7 +202,7 @@ body (background:#f5f5f5)
 
 ```html
 <section style="text-align:center; padding:20px 0 0;">
-  <p style="margin:0 0 4px; font-size:15px; font-weight:bold; color:#1A1A2E;">ESTHER不二</p>
+  <p style="margin:0 0 4px; font-size:15px; font-weight:bold; color:#694B40;">木鱼 / MUYU</p>
   <p style="margin:0; font-size:13px; color:#8A8A9A; line-height:1.8;">▪️在AI时代认真生活的女生｜INTJ<br>▪️跟Agent搭档的第1年</p>
 </section>
 ```

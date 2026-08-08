@@ -20,13 +20,14 @@
 
 ## 👤 头像/IP形象
 
-请将你的头像文件放入 `assets/avatar.jpg`（建议正方形，至少 400×400px）。
+默认头像是 `assets/muyu/avatar.png`（木鱼 IP 头像，180×180px）；卡片和小尺寸署名直接使用它。
 
-如果你有完整IP形象（全身/半身），放入 `assets/character.png`。
+默认完整 IP 是 `assets/muyu/explorer.gif`，并提供 `.webm` / `.mp4` 版本供 Hero 或网页使用。
 
 ### 使用规则
-- 需要头像时优先用 `assets/avatar.jpg`
-- 是否在页面中使用IP形象由你决定，不强制
+- 需要头像时优先用 `assets/muyu/avatar.png`
+- 需要动态 IP 时优先用 `assets/muyu/explorer.webm`，GIF 仅作不支持视频时的 fallback
+- 作者署名统一使用「木鱼 / MUYU」；简介使用「用科技解决生活问题的探索者」
 
 ---
 

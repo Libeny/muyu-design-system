@@ -1,13 +1,13 @@
 ---
-name: esther-design-system
-description: 不二的个人IP设计系统。做HTML页面、个人网站、教程页面、介绍页面、landing page等任何前端设计时自动触发。包含品牌DNA和多个场景子规范。
-author: ESTHER不二 (esthersjw)
+name: muyu-design-system
+description: 木鱼的个人 IP 设计系统。做 HTML 页面、个人网站、教程页面、介绍页面、landing page 等任何前端设计时自动触发。包含品牌 DNA、木鱼 IP 资产和多个场景子规范。
+author: 木鱼 (Libeny)，基于 ESTHER不二 (esthersjw) 的原始作品改编
 license: CC BY-NC-SA 4.0
-repo: https://github.com/esthersjw/esther-design-system
+repo: https://github.com/Libeny/muyu-design-system
 ---
 
-> © 2026 ESTHER不二 (esthersjw) | CC BY-NC-SA 4.0
-> 使用本 Skill 需署名原作者，禁止商用，修改后须以相同协议分享。
+> 木鱼版本 © 2026 Libeny；基于 © 2026 ESTHER不二 (esthersjw) 改编 | CC BY-NC-SA 4.0
+> 使用本 Skill 需保留对原作者的署名，禁止商用，修改后须以相同协议分享。
 
 触发条件：当用户要求制作HTML网页、个人页面、教程页面、介绍型页面、landing page、活动页面、App型页面、作品集等任何前端设计相关任务时触发。也在用户说"做图文"、"图文卡片"、"小红书图文"、"文章转卡片"、"转成图文"、"做卡片"时触发。
 
