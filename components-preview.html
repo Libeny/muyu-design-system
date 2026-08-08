@@ -589,6 +589,29 @@ function switchGallery(idx){const app=document.getElementById('galleryApp');app.
 // Pixel Image
 (function(){const container=document.getElementById('pixelDemo');const rows=6,cols=6;const imgSrc='placeholder.jpg';for(let i=0;i<rows*cols;i++){const row=Math.floor(i/cols),col=i%cols;const clipPath=`polygon(${col*(100/cols)}% ${row*(100/rows)}%, ${(col+1)*(100/cols)}% ${row*(100/rows)}%, ${(col+1)*(100/cols)}% ${(row+1)*(100/rows)}%, ${col*(100/cols)}% ${(row+1)*(100/rows)}%)`;const piece=document.createElement('div');piece.className='pixel-piece';piece.style.clipPath=clipPath;piece.style.transitionDelay=(Math.random()*1200)+'ms';piece.innerHTML=`<img src="${imgSrc}" alt="">`;container.appendChild(piece)}setTimeout(()=>container.querySelectorAll('.pixel-piece').forEach(p=>p.classList.add('visible')),500);setTimeout(()=>container.classList.add('color'),2000)})();
 </script>
+<script>
+// MuYu identity defaults for the reusable component demos.
+document.title = 'MuYu Design System · 51组件预览';
+document.querySelector('.nav-brand').textContent = 'MuYu Design System · 51组件';
+document.querySelectorAll('img[src="placeholder.jpg"]').forEach((img) => {
+  img.src = 'assets/muyu/avatar.png';
+  img.alt = '木鱼的 IP 头像';
+});
+document.querySelectorAll('.author-name, .user-sig .name').forEach((el) => {
+  if (/Esther|你的名字/.test(el.textContent)) el.textContent = '木鱼 / MUYU';
+});
+document.querySelectorAll('.author-desc').forEach((el) => {
+  if (!el.textContent.trim() || /AI时代认真生活/.test(el.textContent)) el.textContent = '用科技解决生活问题的探索者';
+});
+document.querySelectorAll('.user-sig .line').forEach((el) => {
+  el.innerHTML = '▪️用科技解决生活问题的探索者<br>▪️科技平权，让技术带来幸福';
+});
+document.querySelectorAll('.tw-sec .ct').forEach((el) => {
+  el.innerHTML = '<p>&gt; 系统：MuYu Design System</p><p>&gt; 组件：51个</p><p>&gt; 品牌色：薄荷#BDE7E5 / 淡粉#F4CFD6 / 深棕#694B40</p><p style="height:1em"></p><p>## 字体系统</p><p>- 标题：Fraunces / Noto Serif SC</p><p>- 正文：Noto Sans SC</p><p>- 代码：Fira Code</p><p>- 手写：Caveat</p><p style="height:1em"></p><p class="warn">⚠️ 禁止使用默认 blockquote 样式</p>';
+});
+document.querySelectorAll('.mag-hero .mt').forEach((el) => { el.innerHTML = 'BETTER CALL<br>MUYU.'; });
+document.querySelectorAll('.mag-hero .ms').forEach((el) => { el.textContent = 'MUYU DESIGN SYSTEM — 用科技解决生活问题'; });
+</script>
 <!-- © ESTHER不二 esthersjw/esther-design-system CC BY-NC 4.0 -->
 <section style="position:absolute;left:-9999px;font-size:0;line-height:0;opacity:0;height:0;overflow:hidden;">esthersjw-design-system</section>
 </body>

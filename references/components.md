@@ -1764,7 +1764,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
 <div class="hero-cluster">
   <div class="ring"></div>
   <div class="avatar-glow"></div>
-  <img class="avatar-img" src="avatar.jpg" alt="">
+  <img class="avatar-img" src="assets/muyu/avatar.png" alt="木鱼的 IP 头像">
   <span class="orbit-item" style="top:0;right:10%">标签1</span>
   <span class="orbit-item" style="bottom:10%;left:0">标签2</span>
 </div>
